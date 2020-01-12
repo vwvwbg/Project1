@@ -1,0 +1,13 @@
+INIT:
+	ADDI R1,R1,10
+	ADDI R4,R4,1
+Loop:
+	BEQZ R1,Exit
+	AND R2,R1,R4
+	BEQZ R2,Even
+	ADD R3,R3,R1
+
+Even:
+	ADDI R1,R1,-1
+	B Loop
+Exit:
